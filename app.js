@@ -91,7 +91,7 @@ app.use('/api/v1/menu', require('./routes/menuRoutes'));
 
 //-----Database Connection----------
 try {
-    let dev_db_url = 'mongodb://aravind:aravind1997@ds149724.mlab.com:49724/hypto';
+    let dev_db_url = 'mongodb://localhost:27017/venue';
     const mongoDB = process.env.MONGODB_URI || dev_db_url;
     mongoose.connect(mongoDB, { useNewUrlParser: true });
     mongoose.Promise = global.Promise;
